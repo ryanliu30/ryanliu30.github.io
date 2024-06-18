@@ -1,12 +1,9 @@
-github_users:
-  - torvalds
-  - alshedivat
-
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - ryanliu30/fairchem
+  - ryanliu30/FastAnomalyDetection
+  - ryanliu30/KD4Jets
+  - ryanliu30/HierarchicalGNN
+  - ryanliu30/gtrack
+  - ryanliu30/StateDiffusion
+  - murnanedaniel/Particle-JEPA
+  - GNN4ITkTeam/CommonFramework
