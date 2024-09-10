@@ -103,10 +103,22 @@ To be more precise, each time, the image is downsampled by a factor of `scale`, 
     </div>
 </div>
 
-| &nbsp; &nbsp; &nbsp; channel &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; emir &nbsp; &nbsp; | &nbsp; &nbsp; church &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; icon  &nbsp; &nbsp; &nbsp;  |
+| &nbsp; &nbsp; &nbsp; channel &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; **church** &nbsp; &nbsp; | &nbsp; &nbsp; **emir** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **harvesters** &nbsp; &nbsp; &nbsp;  |
 | :----------: | :-------: | :-------: | :-----: | 
-| G offset | (57, 17) | (33, -8) | (48, 5) | 
-| B offset | (88, 44) | (58, -4) | (89, 23) | 
+| G offset | (33, -8) | (57, 17) | (65, -3) | 
+| B offset | (58, -4) | (88, 44) | (124, 13) | 
+| | &nbsp; &nbsp; **icon** &nbsp; &nbsp; | &nbsp; &nbsp; **lady** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **melons**  &nbsp; &nbsp; &nbsp; |
+| :----------: | :-------: | :-------: | :-----: | 
+| G offset | (48, 5) | (62, 3) | (96, 4) | 
+| B offset | (89, 23) | (117, 11) | (179, 13) | 
+| | &nbsp; &nbsp; **onion church** &nbsp; &nbsp; | &nbsp; &nbsp; **sculpture** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **self portrait**  &nbsp; &nbsp; &nbsp; |
+| :----------: | :-------: | :-------: | :-----: | 
+| G offset | (57, 10) | (107, -16) | (98, 8) | 
+| B offset | (108, 36) | (140, -27) | (176, 36) | 
+| | &nbsp; &nbsp; **three generations** &nbsp; &nbsp; | &nbsp; &nbsp; **train** &nbsp; &nbsp; | |
+| :----------: | :-------: | :-------: | :-----: | 
+| G offset | (58, -3) | (43, 27) |  | 
+| B offset | (112, 11) | (87, 32) |  | 
 
 ## Auto Contrast (Histogram Equalization)
 For the Bells & Whistles, I chose to implement the histogram equalization. This method attempts to enhance the contrast by making a histogram of brightness, flattening the histogram to make sure the best spread across all brightness levels. By doing so, details in the picture become more visible.
