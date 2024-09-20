@@ -118,4 +118,7 @@ Finally, I am going to replace the cup cake and candle in Oski's hand with the t
 <div class="row">
     {% include figure.liquid loading="eager" path="assets/img/180-project2/oski.png" title="oski" class="img-fluid rounded z-depth-1" %}
 </div>
-Here, a better shaped mask will probably improve the quality a lot. This is a great example illustrating the importance of a good irregular shape mask.
+The process has also been visulized:
+<div class="row">
+    {% include figure.liquid loading="eager" path="assets/img/180-project2/oski_process.png" title="oski" class="img-fluid rounded z-depth-1" %}
+</div>
