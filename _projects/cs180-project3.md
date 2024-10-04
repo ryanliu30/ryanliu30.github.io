@@ -130,7 +130,7 @@ Now we want to compute the morphing sequence. The implementation is very simple;
     </div>
 </div>
 
-*sometimes the gif file doesn't load on the website. follow this [link](https://github.com/ryanliu30/ryanliu30.github.io/blob/master/assets/img/180-project3/morphing_ryan_soohyun.gif) to view the GIF.
+In case of the gif file doesn't load on the website. follow this [link](https://github.com/ryanliu30/ryanliu30.github.io/blob/master/assets/img/180-project3/morphing_ryan_soohyun.gif) to view the GIF.
 
 ## Part 4. The "Mean face" of a population
 
