@@ -130,6 +130,8 @@ Now we want to compute the morphing sequence. The implementation is very simple;
     </div>
 </div>
 
+*sometimes the gif file doesn't load on the website. follow this [link](https://github.com/ryanliu30/ryanliu30.github.io/blob/master/assets/img/180-project3/morphing_ryan_soohyun.gif) to view the GIF.
+
 ## Part 4. The "Mean face" of a population
 
 Next, we proceed to calculating the "mean face" of the population. To do this, I used the IMM Face Database, which has 240 annotated monocular images of 40 different human faces. I wrote a simple tool to parse the `.asf` file which contains the annotation information. Then, for each group of the faces (they grouped the faces according to the gender and image types), we calculate the average points and triangulate accordingly. Then, we wrap all faces of that group into the average geometry and take the pixel value average. The result looks like:
