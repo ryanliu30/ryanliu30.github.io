@@ -50,12 +50,12 @@ After that, the channels are overlaid to produce the final colored pictures:
 The offsets presented are relative to the R channel.
 
 | &nbsp; &nbsp; &nbsp; channel &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; cathedral &nbsp; &nbsp; | &nbsp; &nbsp; monastery &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; tobolsk  &nbsp; &nbsp; &nbsp;  |
-| :----------: | :-------: | :-------: | :-----: | 
-| G offset | (7, 1) | (6, 1) | (4, 1) | 
-| B offset | (12, 3) | (3, 2) | (6, 3) | 
+| :----------: | :-------: | :-------: | :-----: |
+| G offset | (7, 1) | (6, 1) | (4, 1) |
+| B offset | (12, 3) | (3, 2) | (6, 3) |
 
 ## Multi-scale Implementation
-However, as you may have noticed, this method scales as $$O(W^2H^2)$$ if crop ratio is constant: one $$HW$$ from the grid size, and another $$HW$$ from the similarity score calculation. This is prohibitively slow. To address this issue, I implemented a multi-scale version of the aligning algorithm. The idea is very simple: we downsample the image, find the optimal offsets, and perform a fine-grained search near the optimal offsets found in downsampled version. 
+However, as you may have noticed, this method scales as $$O(W^2H^2)$$ if crop ratio is constant: one $$HW$$ from the grid size, and another $$HW$$ from the similarity score calculation. This is prohibitively slow. To address this issue, I implemented a multi-scale version of the aligning algorithm. The idea is very simple: we downsample the image, find the optimal offsets, and perform a fine-grained search near the optimal offsets found in downsampled version.
 
 To be more precise, each time, the image is downsampled by a factor of `scale`, this recursive call ends as the `depth` parameter is reached. We then perform a full grid search downsampled version (the top of the pyramid). The optimal offset is then divided by the scale to go up by one layer, and the grid of the upper layer is no longer a full search but rather a `scale` portion of the full grid centerred around the optimal offset found by the recursive call. This design keeps the grid size constant, which after experiment balance well between quality and speed. The runtime to process these pictures is about 20 seconds.
 
@@ -104,21 +104,21 @@ To be more precise, each time, the image is downsampled by a factor of `scale`, 
 </div>
 
 | &nbsp; &nbsp; &nbsp; channel &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; **church** &nbsp; &nbsp; | &nbsp; &nbsp; **emir** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **harvesters** &nbsp; &nbsp; &nbsp;  |
-| :----------: | :-------: | :-------: | :-----: | 
-| G offset | (33, -8) | (57, 17) | (65, -3) | 
-| B offset | (58, -4) | (88, 44) | (124, 13) | 
+| :----------: | :-------: | :-------: | :-----: |
+| G offset | (33, -8) | (57, 17) | (65, -3) |
+| B offset | (58, -4) | (88, 44) | (124, 13) |
 | | &nbsp; &nbsp; **icon** &nbsp; &nbsp; | &nbsp; &nbsp; **lady** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **melons**  &nbsp; &nbsp; &nbsp; |
-| :----------: | :-------: | :-------: | :-----: | 
-| G offset | (48, 5) | (62, 3) | (96, 4) | 
-| B offset | (89, 23) | (117, 11) | (179, 13) | 
+| :----------: | :-------: | :-------: | :-----: |
+| G offset | (48, 5) | (62, 3) | (96, 4) |
+| B offset | (89, 23) | (117, 11) | (179, 13) |
 | | &nbsp; &nbsp; **onion church** &nbsp; &nbsp; | &nbsp; &nbsp; **sculpture** &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; **self portrait**  &nbsp; &nbsp; &nbsp; |
-| :----------: | :-------: | :-------: | :-----: | 
-| G offset | (57, 10) | (107, -16) | (98, 8) | 
-| B offset | (108, 36) | (140, -27) | (176, 36) | 
+| :----------: | :-------: | :-------: | :-----: |
+| G offset | (57, 10) | (107, -16) | (98, 8) |
+| B offset | (108, 36) | (140, -27) | (176, 36) |
 | | &nbsp; &nbsp; **three generations** &nbsp; &nbsp; | &nbsp; &nbsp; **train** &nbsp; &nbsp; | |
-| :----------: | :-------: | :-------: | :-----: | 
-| G offset | (58, -3) | (43, 27) |  | 
-| B offset | (112, 11) | (87, 32) |  | 
+| :----------: | :-------: | :-------: | :-----: |
+| G offset | (58, -3) | (43, 27) |  |
+| B offset | (112, 11) | (87, 32) |  |
 
 ## Auto Contrast (Histogram Equalization)
 For the Bells & Whistles, I chose to implement the histogram equalization. This method attempts to enhance the contrast by making a histogram of brightness, flattening the histogram to make sure the best spread across all brightness levels. By doing so, details in the picture become more visible.
