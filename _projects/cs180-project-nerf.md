@@ -15,7 +15,7 @@ In this project, I explored how to use a neural network to render novel views of
 Before tackling the harder task of 3D rendering, we can first take a detour to look at the 2D version of NeRF. the Neural Field. While NeRF fits a model to represent the function $$F: (x, y, z, \theta, \phi) \to (r, g, b, \sigma)$$, the Neural Field fits a model to represent a 2D image as a function $$F: (x, y) \to (r, g, b)$$.
 ## Network Architecture
 To build a Neural Field model, there are two key components:
-(1) featurization and (2) encoder. 
+(1) featurization and (2) encoder.
 
 Featurization is done by positional encoding, which maps a coordinate by
 
@@ -41,7 +41,7 @@ The encoder is implemented by an MLP, with six configurable parameters: input di
 The encoder used for this part of the project has $$L=10$$, $$d_{i}=42$$, $$d_{h}=256$$, $$d_{o}=3$$, $$n=3$$, $$p=0$$, and activation is SiLU $$\sigma(x)=x\cdot\mathrm{sigmoid}(x)$$. To make sure the output is in valid RGB range, the output is passed through a sigmoid to rescale it to $$[0, 1]$$ range.
 
 ## Training Procedure
-There are three major components of training the model: data loading, optimization, and evaluation. 
+There are three major components of training the model: data loading, optimization, and evaluation.
 
 For data loading, instead of using the torch `Dataset` and `DataLoader`, I implemented a custom on-device data iterator. The advantage is that torch `Dataloader` is a multi-threaded CPU data loader. As our dataset is small (an image!) and batch size is large (~10K), it is more efficient to keep the entire dataset on the cuda device. The images used for training are shown below:
 
@@ -216,7 +216,7 @@ $$
         sv\\
         s
     \end{matrix}
-\right] = 
+\right] =
 \left[
     \begin{matrix}
         f_x & 0 & o_x\\
@@ -342,7 +342,7 @@ $$
 \hat C(\mathbf{r}) = \sum_{i=1}^N T_i(1 - e^{-\sigma_i \delta_t})\mathbf{c}_i
 $$
 
-where $$T_i = e^{-\sum_{j=1}^{i-1}\sigma_i \delta_t}$$. 
+where $$T_i = e^{-\sum_{j=1}^{i-1}\sigma_i \delta_t}$$.
 
 ## Network Architecture
 Similar to Neural Field, the two main components are still featurization and encoder. As the input is now a five-tuple of $$(x, y, z, \theta, \phi)$$, we need to rethink the way to featurize it. $$(\theta, \phi)$$ can be equivalently represented by a three-unit-vector $$\mathbf{R}_d$$, which is the ray direction. Therefore, we use two positional encoders to encode them. Notice that $$(\theta, \phi)$$ does not require a high spatial resolution as it always lies on an unit sphere. Therefore we use $$L=10$$ for $$(x, y, z)$$ and $$L=4$$ for ray directions.

@@ -69,7 +69,7 @@ Now, as the implementation is pretty successful, we proceed to my favorite resul
 </div>
 Covered by the smiles, it was the deep frustration we got throughout the class!
 
-Now, we wish to analyze in the frequency domain what happend exactly in this process. This can be achieved by Fourier analysis. We first use `scipy.fft.fft2` to transform the image into the frequency domain. Notice that `fft2` outputs complex numbers and the zero frequency is located upper left corner `[0,0]` instead of the center of the image. We can use `fftshift` to move them back and use `np.abs` to get the magnitude of the component. I also used log-scale to better illustrate the weaker parts. We see in the case of a low-pass filter, only the frequencies around the two axes are preserved. This is the low frequency part of the signal. On the other hand, with the high frequency filter, we see a clear hollow spot at the origin, and the surroundings became significanly stronger. This is the high frequency part of the signal. 
+Now, we wish to analyze in the frequency domain what happend exactly in this process. This can be achieved by Fourier analysis. We first use `scipy.fft.fft2` to transform the image into the frequency domain. Notice that `fft2` outputs complex numbers and the zero frequency is located upper left corner `[0,0]` instead of the center of the image. We can use `fftshift` to move them back and use `np.abs` to get the magnitude of the component. I also used log-scale to better illustrate the weaker parts. We see in the case of a low-pass filter, only the frequencies around the two axes are preserved. This is the low frequency part of the signal. On the other hand, with the high frequency filter, we see a clear hollow spot at the origin, and the surroundings became significanly stronger. This is the high frequency part of the signal.
 <div class="row">
     {% include figure.liquid loading="eager" path="assets/img/180-project2/freq.png" title="frequency" class="img-fluid rounded z-depth-1" %}
 </div>
@@ -87,7 +87,7 @@ The following example is an successful one. It is morphing between airpods and C
 </div>
 
 ### Part 2.3: Gaussian and Laplacian Stacks
-To implament a Gaussian and Laplacian stack, we first take in an image, create a new image by convolving with a gaussian filter. Now, we add the convolved image to the Gaussian stack and the difference between the original and the convolved into the Laplacian stack. Next, the new image becomes the input and the process is repeated. An example of the stacks is shown below. 
+To implament a Gaussian and Laplacian stack, we first take in an image, create a new image by convolving with a gaussian filter. Now, we add the convolved image to the Gaussian stack and the difference between the original and the convolved into the Laplacian stack. Next, the new image becomes the input and the process is repeated. An example of the stacks is shown below.
 <div class="row">
     {% include figure.liquid loading="eager" path="assets/img/180-project2/oraple_stack.png" title="oraple_stack" class="img-fluid rounded z-depth-1" %}
 </div>
