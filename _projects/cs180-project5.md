@@ -1073,7 +1073,7 @@ and the sampling (backward) process is defined by:
     </div>
 </div>
 
-in our project, $$\beta_t$$ is defined to be even interval sequence from `1e-4` to `2e-2`. $$\alpha_t$$ defined to be $$1 - beta_t$$, and $$\hat\alpha_t$$ defined to be the cumulative product of $$\alpha_t$$. 
+in our project, $$\beta_t$$ is defined to be even interval sequence from `1e-4` to `2e-2`. $$\alpha_t$$ defined to be $$1 - beta_t$$, and $$\hat\alpha_t$$ defined to be the cumulative product of $$\alpha_t$$.
 
 The last tweak to the denoiser UNet in previous section is that now we need to condition our network by time embedding, which will be elaborate later.
 

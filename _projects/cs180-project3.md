@@ -94,7 +94,7 @@ $$
 \left[
 \begin{matrix}
 x_1 - x_3 & x_2 - x_3 \\
-y_1 - y_3 & y_2 - y_3 
+y_1 - y_3 & y_2 - y_3
 \end{matrix}
 \right]
 \left[
@@ -103,7 +103,7 @@ y_1 - y_3 & y_2 - y_3
 \lambda_2
 \end{matrix}
 \right]
- = 
+ =
 \left[
 \begin{matrix}
 x - x_3\\
@@ -158,7 +158,7 @@ and the arbitraty faces into average:
     </div>
 </div>
 
-We can try wrapping my own face 
+We can try wrapping my own face
 
 <div class="row">
     <div style="margin:0 auto;">

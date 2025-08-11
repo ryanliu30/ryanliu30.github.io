@@ -39,7 +39,7 @@ The other set is images with rectangles that we can rectify. Here, I took pictur
     </div>
 </div>
 
-## Recover Homographies 
+## Recover Homographies
 To recover homography, we need to solve:
 
 $$
@@ -57,7 +57,7 @@ y\\
 1
 \end{matrix}
 \right]
- = 
+ =
 \left[
 \begin{matrix}
 wx'\\
@@ -88,7 +88,7 @@ g\\
 h
 \end{matrix}
 \right]
- = 
+ =
 \left[
 \begin{matrix}
 x'\\
@@ -209,9 +209,9 @@ Here, number of corners returned is `500`. Other numbers can be used, I just fol
 
 
 | | roof | woods | alcohol |
-| :----------: | :----: | :-------: | :-------: | 
-| picture 1 | 19.03 | 24.70 | 22.02 | 
-| picture 2 | 19.10 | 25.00 | 20.25 | 
+| :----------: | :----: | :-------: | :-------: |
+| picture 1 | 19.03 | 24.70 | 22.02 |
+| picture 2 | 19.10 | 25.00 | 20.25 |
 
 ## Feature Descriptor Extraction
 Now the task is to extract the feature descriptors. This involves two steps. First, we need to downsample the image to get the low frequency information. I choose to use Gaussian filter to ahieve this. Note that since we are downsampling by a factor of 5, I choose the standard deviation of the kernel to be five pixels. After low-pass filter, we can safely downsample the image without worrying about aliasing. This is done by sampling a eight by eight grid centered around each corner with a stride 5. The next step involves normalizing each descriptor. Since my pictures are colored, I think the color information is important for getting better homographies. The descriptors are therefore normalized to have zero mean and unit variance along both spatial and color channels. Here I visualized a few examples, they are renormalized to have minimum of 0 and maximum of 1 for visualization purposes:
