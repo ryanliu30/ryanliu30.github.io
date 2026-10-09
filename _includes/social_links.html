@@ -1,0 +1,6 @@
+{% assign info = site.data.main_info %}
+{% if info.bsky %}<a href="{{ info.bsky }}" target="_blank" aria-label="Bluesky"><i class="fa-brands fa-bluesky {{ include.size }}"></i></a>{% endif %}
+{% if info.twitter %}<a href="{{ info.twitter }}" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter {{ include.size }}"></i></a>{% endif %}
+{% if info.linkedin %}<a href="{{ info.linkedin }}" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin {{ include.size }}"></i></a>{% endif %}
+{% if info.github %}<a href="{{ info.github }}" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github {{ include.size }}"></i></a>{% endif %}
+{% if info.google_scholar %}<a href="{{ info.google_scholar }}" target="_blank" aria-label="Google Scholar"><i class="ai ai-google-scholar {{ include.size }}"></i></a>{% endif %}

@@ -1,0 +1,31 @@
+# Optional per-paper links: paper_pdf, slides, poster, video, code, data.
+# Local files go under /assets/publications/<folder>/; external links are used as-is.
+papers:
+
+  - title: "From Evaluation to Design: Using Potential Energy Surface Smoothness Metrics to Guide Machine Learning Interatomic Potential Architectures"
+    authors: "<b>Ryan Liu</b>, Eric Qu, Toby Kreiman, Sam Blau, Aditi S. Krishnapriyan"
+    venue: "ICML'26: International Conference on Machine Learning. 2026."
+    paper_pdf: "https://arxiv.org/abs/2602.04861"
+    code: "https://github.com/ryanliu30/bsct"
+    selected: y
+
+  - title: "Fast Particle-based Anomaly Detection Algorithm with Variational Autoencoder"
+    authors: "<b>Ryan Liu</b>, Abhijith Gandrakota, Jennifer Ngadiuba, Maria Spiropulu, Jean-Roch Vlimant"
+    venue: "NeurIPS Workshop on Machine Learning and the Physical Sciences. 2023."
+    paper_pdf: "https://arxiv.org/abs/2311.17162"
+    code: "https://github.com/ryanliu30/FastAnomalyDetection"
+    selected: y
+
+  - title: "Efficient and Robust Jet Tagging at the LHC with Knowledge Distillation"
+    authors: "<b>Ryan Liu</b>, Abhijith Gandrakota, Jennifer Ngadiuba, Maria Spiropulu, Jean-Roch Vlimant"
+    venue: "NeurIPS Workshop on Machine Learning and the Physical Sciences. 2023."
+    paper_pdf: "https://arxiv.org/abs/2311.14160"
+    code: "https://github.com/ryanliu30/KD4Jets"
+    selected: y
+
+  - title: "Hierarchical Graph Neural Networks for Particle Track Reconstruction"
+    authors: "<b>Ryan Liu</b>, Paolo Calafiura, Steven Farrell, Xiangyang Ju, Daniel Thomas Murnane, Tuan Minh Pham"
+    venue: "ACAT: 21st International Workshop on Advanced Computing and Analysis Techniques in Physics Research. 2023."
+    paper_pdf: "https://arxiv.org/abs/2303.01640"
+    code: "https://github.com/ryanliu30/HierarchicalGNN"
+    selected: y

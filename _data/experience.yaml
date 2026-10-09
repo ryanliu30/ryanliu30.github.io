@@ -1,0 +1,31 @@
+experiences:
+
+- place: "Caltech"
+  time: "2025 - now"
+  title: "Ph.D. Student in Physics"
+  subtitle: "Advisor: Hsin-Yuan Huang <br/> NSF Graduate Research Fellow"
+  category: "school"
+
+- place: "BAIR, UC Berkeley"
+  time: "2024 - 2026"
+  title: "Undergraduate Researcher"
+  subtitle: "Machine learning interatomic potentials"
+  category: "work"
+
+- place: "Fermilab"
+  time: "2023 - 2024"
+  title: "Caltech SURF Fellow, Undergraduate Researcher"
+  subtitle: "Anomaly detection and jet tagging for CMS L1T (2023) <br/> Simulation for a Level-1 trigger foundation model (2024)"
+  category: "work"
+
+- place: "LBNL"
+  time: "2022, 2024"
+  title: "Undergraduate Researcher"
+  subtitle: "Hierarchical GNNs for particle track reconstruction (2022) <br/> Graph segmentation for ATLAS GNN track reconstruction (2024)"
+  category: "work"
+
+- place: "UC Berkeley"
+  time: "2021 - 2025"
+  title: "B.A. Student"
+  subtitle: "Physics and Computer Science <br/> Highest Distinction in General Scholarship <br/> GPA: 4.00/4.00"
+  category: "school"

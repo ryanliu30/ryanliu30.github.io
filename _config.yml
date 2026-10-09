@@ -1,0 +1,7 @@
+source:      .
+destination: ./_site
+includes:    ./_includes
+baseurl: ""
+
+exclude:
+  - README.md
